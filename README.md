@@ -24,13 +24,21 @@ vCard.organization = 'DigitYourDream';
 To access to vcf file you need to set all property to url parameter with `_` prefix
 
 ```
-http://example.com/path-to-vcard?_firstName=Hicham&_middleName=M&_lastName=Slimani&_uid=a0c0a844-eeb3-4897-b595-54880930e4d7&organization=DigitYourDream
+https://path-to-vcard.projects.digityourdream.fr/path-to-vcard?_firstName=Hicham&_middleName=M&_lastName=Slimani&_uid=a0c0a844-eeb3-4897-b595-54880930e4d7&organization=DigitYourDream
 ```
+
+## Providers
+
+Different provider where is hosted `HTML` files
+
+| Provider       | Endpoint                                          |
+|----------------|---------------------------------------------------|
+| DigitYourDream | https://path-to-vcard.projects.digityourdream.fr/ |
 
 ## Use case
 
 ### Notion formula
 
 ```
-"http://localhost:5173/?_firstName=" + prop("First name") + "&_lastName=" + prop("Last name") + "&_gender=" + prop("Genre") + "&_organization=" + prop("🏢 Companies") + "&_workPhone=" + replaceAll(replaceAll(prop("Phone pro"), " ", ""), "[+]", "%2B") + "&_homePhone=" + replaceAll(replaceAll(prop("Phone maison"), " ", ""), "[+]", "%2B") + "&_homePhone=" + replaceAll(replaceAll(prop("Phone perso"), " ", ""), "[+]", "%2B") + "&_workEmail=" + prop("Email") + "&_email=" + prop("Email perso") + "&_namePrefix=" + prop("Genre")
+"https://path-to-vcard.projects.digityourdream.fr/?_firstName=" + prop("First name") + "&_lastName=" + prop("Last name") + "&_gender=" + prop("Genre") + "&_organization=" + prop("🏢 Companies") + "&_workPhone=" + replaceAll(replaceAll(prop("Phone pro"), " ", ""), "[+]", "%2B") + "&_homePhone=" + replaceAll(replaceAll(prop("Phone maison"), " ", ""), "[+]", "%2B") + "&_homePhone=" + replaceAll(replaceAll(prop("Phone perso"), " ", ""), "[+]", "%2B") + "&_workEmail=" + prop("Email") + "&_email=" + prop("Email perso") + "&_namePrefix=" + prop("Genre")
 ```
